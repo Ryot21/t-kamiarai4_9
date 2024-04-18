@@ -2710,7 +2710,7 @@ button.swiper-pagination-bullet {
 }
 
 .w90 {
-  width: 90%;
+  width: 90% !important;
   margin: auto;
 }
 
@@ -4223,11 +4223,6 @@ button.swiper-pagination-bullet {
   position: relative;
   overflow: hidden;
 }
-@media (768px >= width) {
-  .c-contents.-f-view .imgBox {
-    opacity: 0.75;
-  }
-}
 .c-contents.-f-view .c-contentsBox {
   position: absolute;
 }
@@ -4458,7 +4453,7 @@ button.swiper-pagination-bullet {
 .c-contents_title::before {
   content: "";
   position: absolute;
-  bottom: -70%;
+  bottom: -55%;
   left: 50%;
   transform: translateX(-50%);
   width: auto;
@@ -4466,7 +4461,7 @@ button.swiper-pagination-bullet {
 }
 @media (width >= 768px) {
   .c-contents_title::before {
-    bottom: -45%;
+    bottom: -57%;
     font-size: 12px;
   }
 }
@@ -4484,6 +4479,26 @@ button.swiper-pagination-bullet {
 }
 @media (width >= 768px) {
   .c-contents_title.-b-btm::after {
+    bottom: -40px;
+  }
+}
+@media (768px >= width) {
+  .c-contents_title.-b-btm.-row02::before {
+    bottom: -30%;
+  }
+}
+@media (width >= 768px) {
+  .c-contents_title.-b-btm.-row02::after {
+    bottom: -40px;
+  }
+}
+@media (768px >= width) {
+  .c-contents_title.-b-btm.-row02_s::before {
+    bottom: -30%;
+  }
+}
+@media (768px >= width) {
+  .c-contents_title.-b-btm.-row02_s::after {
     bottom: -30px;
   }
 }
@@ -4532,6 +4547,14 @@ button.swiper-pagination-bullet {
   content: "PLAN";
   white-space: nowrap;
 }
+.c-contents_title.-land-design::before {
+  content: "BRIGHT AND OPEN LAND DESIGN";
+  white-space: nowrap;
+}
+.c-contents_title.-land-scape::before {
+  content: "LAND SCAPE";
+  white-space: nowrap;
+}
 .c-contents_title.-basinArea::before {
   content: "THE BASIN AREA";
   white-space: nowrap;
@@ -4576,6 +4599,10 @@ button.swiper-pagination-bullet {
 }
 .c-contents_title.-owner::before {
   content: "OWNER VOICE";
+  white-space: nowrap;
+}
+.c-contents_title.-city::before {
+  content: "A CITY IN THE SPOTLIGHT";
   white-space: nowrap;
 }
 .c-contents_title.-sample::before {

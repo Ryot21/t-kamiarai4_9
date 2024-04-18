@@ -5,13 +5,13 @@
     &::before{
         content: "";
         position: absolute;
-        bottom: -70%;
+        bottom: -55%;
         left: 50%;
         transform: translateX(-50%);
         width: auto;
         font-size: 10px;
         @include min(768) {
-            bottom: -45%;
+            bottom: -57%;
             font-size: 12px;
         }
     }
@@ -30,7 +30,16 @@
             height: 1px;
             background: $main-color--b;
             @include min(768){
-                bottom: -30px;
+                bottom: -40px;
+            }
+        }
+        // 改行に対応
+        &.-row02{
+            &::before{@include max(768){bottom: -30%;}}
+            &::after{ @include min(768){bottom: -40px;}}
+            &_s{
+                &::before{@include max(768){bottom: -30%;}}
+                &::after{ @include max(768){bottom: -30px;}}
             }
         }
         // 色指定
@@ -55,6 +64,8 @@
     &.-layout{&::before{content: "LAYOUT PLAN / PLOT PLAN"; white-space: nowrap;}}  // レイアウト
     &.-house-layout{&::before{content: "HOUSE LAYOUT"; white-space: nowrap;}}       // ハウスレイアウト
     &.-plan{&::before{content: "PLAN"; white-space: nowrap;}}                       // プラン
+    &.-land-design{&::before{content: "BRIGHT AND OPEN LAND DESIGN"; white-space: nowrap;}} // ランドデザイン
+    &.-land-scape{&::before{content: "LAND SCAPE"; white-space: nowrap;}} // ランドデザイン
 
     &.-basinArea{&::before{content: "THE BASIN AREA"; white-space: nowrap;}}        // 水回り
     &.-kitchen{&::before{content: "KITCHEN";}}                                      // キッチン
@@ -70,6 +81,8 @@
     &.-spot{&::before{content: "RECOMMENDED SPOTS"; white-space: nowrap;}}          // スポット
     &.-portfolio{&::before{content: "CONSTRUCTION PORTFOLIO"; white-space: nowrap;}}// 施工例
     &.-owner{&::before{content: "OWNER VOICE"; white-space: nowrap;}}               // オーナー
+    &.-city{&::before{content: "A CITY IN THE SPOTLIGHT"; white-space: nowrap;}}
+
 
     &.-sample{&::before{content: "CONTENT TITLE"; white-space: nowrap;}}            // サンプル
 }
@@ -311,6 +324,7 @@
             width: 100%;
             color: $main-color--b;
         }
+
         // アイコン文頭にある場合のみ、ボーダーの位置を変更する。
         &.-dot{&::before{border-bottom: 3px dotted;}}
         &.-line{&::before{border-bottom: 1px solid;}}

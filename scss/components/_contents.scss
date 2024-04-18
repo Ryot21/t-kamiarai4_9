@@ -176,7 +176,7 @@
 		overflow: hidden;
 		.imgBox{
 			@include max(768){
-				opacity: .75;
+				// opacity: .75;
 			}
 		}
 		.c-contentsBox{
