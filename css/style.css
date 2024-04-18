@@ -116,7 +116,7 @@ p {
 }
 @font-face {
   font-family: "e-font01";
-  src: url("../fonts/en/BebasNeue-Regular.ttf") format("truetype");
+  src: url("../fonts/en/Trajan Pro 3 Regular.otf") format("opentype");
 }
 @font-face {
   font-family: "e-font02";
@@ -128,7 +128,7 @@ p {
 }
 @font-face {
   font-family: "mincho-font01";
-  src: url("../fonts/mincho/ShipporiMincho-Regular.ttf") format("truetype");
+  src: url("../fonts/mincho/A-OTF-RyuminPr6N-Regular.otf") format("opentype");
 }
 @font-face {
   font-family: "gothic-font01";
@@ -136,7 +136,7 @@ p {
 }
 h1, h2, h3, h4, h5, h6, p, a, span, label, button {
   color: #3b3b3b;
-  font-family: gothic-font01;
+  font-family: mincho-font01;
   font-weight: normal;
   font-style: normal;
   line-height: 1.3;
