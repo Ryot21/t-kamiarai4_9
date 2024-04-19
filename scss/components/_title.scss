@@ -82,7 +82,10 @@
     &.-portfolio{&::before{content: "CONSTRUCTION PORTFOLIO"; white-space: nowrap;}}// 施工例
     &.-owner{&::before{content: "OWNER VOICE"; white-space: nowrap;}}               // オーナー
     &.-city{&::before{content: "A CITY IN THE SPOTLIGHT"; white-space: nowrap;}}
+    &.-other{&::before{content: "OTHER EQUIPMENT"; white-space: nowrap;}}           // その他の設備
 
+
+    &.-gallery{&::before{content: "GALLERY"; white-space: nowrap;}}                 // ギャラリー
 
     &.-sample{&::before{content: "CONTENT TITLE"; white-space: nowrap;}}            // サンプル
 }

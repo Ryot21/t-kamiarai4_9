@@ -145,9 +145,22 @@
             border-radius: 20px 0 0 20px;
         }
     }
+    // ホバー
+    &.-h{
+        .imgBox{
+            transform: scale(1);
+            transition: all 1s;
+        }
+        &:hover{
+            .imgBox{
+                transform: scale(1.05);
+
+            }
+        }
+    }
     // シャドウ
     &.-shadow{
-        box-shadow: 1px 3px 5px 1px rgb(0 0 0 / 34%);
+        .imgBox{box-shadow: 1px 3px 5px 1px rgb(0 0 0 / 34%);}
     }
 }
 .box-r{
