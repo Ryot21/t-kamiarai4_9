@@ -86,7 +86,8 @@
 
 
     &.-gallery{&::before{content: "GALLERY"; white-space: nowrap;}}                 // ギャラリー
-
+    &.-message{&::before{content: "MESSAGE FROM THE ARCHITECT"; white-space: nowrap;}}// メッセージ
+    &.-ideas{&::before{content: "GET THE IDEAL LIFESTYLE"; white-space: nowrap;}}
     &.-sample{&::before{content: "CONTENT TITLE"; white-space: nowrap;}}            // サンプル
 }
 

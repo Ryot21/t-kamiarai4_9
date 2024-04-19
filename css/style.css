@@ -399,7 +399,7 @@ h1.s-3L, h2.s-3L, h3.s-3L, h4.s-3L, h5.s-3L, h6.s-3L, p.s-3L, a.s-3L, span.s-3L,
 }
 h1.s-kome, h2.s-kome, h3.s-kome, h4.s-kome, h5.s-kome, h6.s-kome, p.s-kome, a.s-kome, span.s-kome, label.s-kome, button.s-kome {
   font-size: 1rem;
-  color: #dacebc;
+  color: #3b3b3b;
   transform: scale(0.8);
 }
 @media (width >= 768px) {
@@ -4620,6 +4620,14 @@ button.swiper-pagination-bullet {
   content: "GALLERY";
   white-space: nowrap;
 }
+.c-contents_title.-message::before {
+  content: "MESSAGE FROM THE ARCHITECT";
+  white-space: nowrap;
+}
+.c-contents_title.-ideas::before {
+  content: "GET THE IDEAL LIFESTYLE";
+  white-space: nowrap;
+}
 .c-contents_title.-sample::before {
   content: "CONTENT TITLE";
   white-space: nowrap;
@@ -5922,56 +5930,44 @@ a {
 .swiper {
   z-index: 0;
 }
-.swiper .swiper-wrapper .swiper-slide {
-  text-align: end;
-  opacity: 0.5;
-  overflow: hidden;
-  transition: 0.5s all;
-}
-.swiper .swiper-wrapper .swiper-slide img {
-  width: 100%;
-  height: auto;
-  pointer-events: auto;
-}
-@media (width >= 768px) {
-  .swiper .swiper-wrapper .swiper-slide img {
-    width: 100%;
-    height: auto;
-  }
-}
-.swiper .swiper-wrapper .swiper-slide a {
-  display: block;
-  color: #3b3b3b;
-  background: #ffffff;
-  font-weight: bold;
-  overflow: hidden;
-}
-.swiper .swiper-wrapper .swiper-slide a img {
-  transition: 0.5s all;
-}
-@media (768px >= width) {
-  .swiper .swiper-wrapper .swiper-slide a img {
-    color: #3b3b3b;
-    margin-right: 9vw;
-  }
-}
-@media (768px >= width) {
-  .swiper .swiper-wrapper .swiper-slide a img::after {
-    background: #3b3b3b;
-  }
-}
-.swiper .swiper-wrapper .swiper-slide a:hover {
-  color: #b1a595;
-}
-.swiper .swiper-wrapper .swiper-slide a:hover img {
-  transform: scale(1.05);
-  opacity: 1;
-}
 .swiper.swiper-Fview .swiper-slide .imgBox img {
   transition: 3s all;
 }
 .swiper.swiper-Fview .swiper-slide-active .zoom img {
   transform: scale(1.05);
+}
+.swiper.swiper-Fview .swiper-pagination {
+  bottom: 0;
+  left: 51%;
+  transform: translateX(-50%);
+}
+@media (width >= 768px) {
+  .swiper.swiper-Fview .swiper-pagination {
+    bottom: 0px;
+  }
+}
+.swiper.swiper-Fview .swiper-pagination-bullet {
+  border-radius: 4px;
+  transform: scaleX(1);
+  transition: 0.5s all;
+}
+@media (width >= 768px) {
+  .swiper.swiper-Fview .swiper-pagination-bullet {
+    border-radius: 1px;
+  }
+}
+.swiper.swiper-Fview .swiper-pagination-bullet span {
+  display: inline-block;
+}
+.swiper.swiper-Fview .swiper-pagination-bullet-active {
+  width: 50px;
+  background: #ebebeb;
+  border: 1px solid #3b3b3b;
+}
+@media (width >= 768px) {
+  .swiper.swiper-Fview .swiper-pagination-bullet-active {
+    background: #3b3b3b;
+  }
 }
 @media (768px >= width) {
   .swiper.swiperMain .swiper-slide {
@@ -6029,32 +6025,114 @@ a {
     background: #3b3b3b !important;
   }
 }
-.swiper.swiper-Build, .swiper.swiper-Video {
+.swiper.swiper-Build, .swiper.swiper-Maker, .swiper.swiper-Video {
   width: 100%;
   height: 100%;
 }
-.swiper.swiper-Build .swiper-slide, .swiper.swiper-Video .swiper-slide {
+.swiper.swiper-Build .swiper-slide, .swiper.swiper-Maker .swiper-slide, .swiper.swiper-Video .swiper-slide {
   transform: scale(0.8);
 }
-.swiper.swiper-Build .swiper-slide img, .swiper.swiper-Video .swiper-slide img {
+.swiper.swiper-Build .swiper-slide img, .swiper.swiper-Maker .swiper-slide img, .swiper.swiper-Video .swiper-slide img {
   pointer-events: auto !important;
 }
-.swiper.swiper-Build .swiper-slide-active, .swiper.swiper-Video .swiper-slide-active {
-  opacity: 1;
+.swiper.swiper-Build .swiper-slide-active, .swiper.swiper-Maker .swiper-slide-active, .swiper.swiper-Video .swiper-slide-active {
+  opacity: 1 !important;
   transform: scale(1) !important;
 }
-.swiper.swiper-Build .swiper-slide:hover, .swiper.swiper-Video .swiper-slide:hover {
+.swiper.swiper-Build .swiper-slide:hover, .swiper.swiper-Maker .swiper-slide:hover, .swiper.swiper-Video .swiper-slide:hover {
   opacity: 1;
   transform: scale(0.9);
 }
-.swiper.swiper-Build .swiper-pagination, .swiper.swiper-Video .swiper-pagination {
+.swiper.swiper-Build .swiper-pagination, .swiper.swiper-Maker .swiper-pagination, .swiper.swiper-Video .swiper-pagination {
   bottom: 0;
   left: 51%;
   transform: translateX(-50%);
 }
 @media (width >= 768px) {
-  .swiper.swiper-Build .swiper-pagination, .swiper.swiper-Video .swiper-pagination {
+  .swiper.swiper-Build .swiper-pagination, .swiper.swiper-Maker .swiper-pagination, .swiper.swiper-Video .swiper-pagination {
     bottom: 0px;
+  }
+}
+.swiper.swiper-Build .swiper-pagination-bullet, .swiper.swiper-Maker .swiper-pagination-bullet, .swiper.swiper-Video .swiper-pagination-bullet {
+  border-radius: 4px;
+  transform: scaleX(1);
+  transition: 0.5s all;
+}
+@media (width >= 768px) {
+  .swiper.swiper-Build .swiper-pagination-bullet, .swiper.swiper-Maker .swiper-pagination-bullet, .swiper.swiper-Video .swiper-pagination-bullet {
+    border-radius: 1px;
+  }
+}
+.swiper.swiper-Build .swiper-pagination-bullet span, .swiper.swiper-Maker .swiper-pagination-bullet span, .swiper.swiper-Video .swiper-pagination-bullet span {
+  display: inline-block;
+}
+.swiper.swiper-Build .swiper-pagination-bullet-active, .swiper.swiper-Maker .swiper-pagination-bullet-active, .swiper.swiper-Video .swiper-pagination-bullet-active {
+  width: 50px;
+  background: #ebebeb;
+  border: 1px solid #3b3b3b;
+}
+@media (width >= 768px) {
+  .swiper.swiper-Build .swiper-pagination-bullet-active, .swiper.swiper-Maker .swiper-pagination-bullet-active, .swiper.swiper-Video .swiper-pagination-bullet-active {
+    background: #3b3b3b;
+  }
+}
+.swiper.swiper-Build, .swiper.swiper-Video {
+  padding-bottom: 1%;
+  overflow: inherit;
+}
+.swiper.swiper-Build .swiper-slide, .swiper.swiper-Video .swiper-slide {
+  text-align: end;
+  opacity: 0.5;
+  overflow: hidden;
+  transition: 0.5s all;
+}
+.swiper.swiper-Build .swiper-slide img, .swiper.swiper-Video .swiper-slide img {
+  width: 100%;
+  height: auto;
+  pointer-events: auto;
+}
+@media (width >= 768px) {
+  .swiper.swiper-Build .swiper-slide img, .swiper.swiper-Video .swiper-slide img {
+    width: 100%;
+    height: auto;
+  }
+}
+.swiper.swiper-Build .swiper-slide a, .swiper.swiper-Video .swiper-slide a {
+  display: block;
+  color: #3b3b3b;
+  background: #ffffff;
+  font-weight: bold;
+  overflow: hidden;
+}
+.swiper.swiper-Build .swiper-slide a img, .swiper.swiper-Video .swiper-slide a img {
+  transition: 0.5s all;
+}
+@media (768px >= width) {
+  .swiper.swiper-Build .swiper-slide a img, .swiper.swiper-Video .swiper-slide a img {
+    color: #3b3b3b;
+    margin-right: 9vw;
+  }
+}
+@media (768px >= width) {
+  .swiper.swiper-Build .swiper-slide a img::after, .swiper.swiper-Video .swiper-slide a img::after {
+    background: #3b3b3b;
+  }
+}
+.swiper.swiper-Build .swiper-slide a:hover, .swiper.swiper-Video .swiper-slide a:hover {
+  color: #b1a595;
+}
+.swiper.swiper-Build .swiper-slide a:hover img, .swiper.swiper-Video .swiper-slide a:hover img {
+  transform: scale(1.05);
+  opacity: 1;
+}
+.swiper.swiper-Build .swiper-pagination, .swiper.swiper-Video .swiper-pagination {
+  bottom: 15px;
+  left: 51%;
+  transform: translateX(-50%);
+}
+@media (width >= 768px) {
+  .swiper.swiper-Build .swiper-pagination, .swiper.swiper-Video .swiper-pagination {
+    bottom: -20px;
   }
 }
 .swiper.swiper-Build .swiper-pagination-bullet, .swiper.swiper-Video .swiper-pagination-bullet {
@@ -6077,6 +6155,39 @@ a {
 }
 @media (width >= 768px) {
   .swiper.swiper-Build .swiper-pagination-bullet-active, .swiper.swiper-Video .swiper-pagination-bullet-active {
+    background: #3b3b3b;
+  }
+}
+.swiper.swiper-Maker .swiper-pagination {
+  bottom: 0;
+  left: 51%;
+  transform: translateX(-50%);
+}
+@media (width >= 768px) {
+  .swiper.swiper-Maker .swiper-pagination {
+    bottom: 0px;
+  }
+}
+.swiper.swiper-Maker .swiper-pagination-bullet {
+  border-radius: 4px;
+  transform: scaleX(1);
+  transition: 0.5s all;
+}
+@media (width >= 768px) {
+  .swiper.swiper-Maker .swiper-pagination-bullet {
+    border-radius: 1px;
+  }
+}
+.swiper.swiper-Maker .swiper-pagination-bullet span {
+  display: inline-block;
+}
+.swiper.swiper-Maker .swiper-pagination-bullet-active {
+  width: 50px;
+  background: #ebebeb;
+  border: 1px solid #3b3b3b;
+}
+@media (width >= 768px) {
+  .swiper.swiper-Maker .swiper-pagination-bullet-active {
     background: #3b3b3b;
   }
 }
